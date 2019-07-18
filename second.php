@@ -1,7 +1,4 @@
 
-
-
-
 <table border="5">
 <tr>
 <th>ID</th>
@@ -13,10 +10,6 @@
 <th>Delete</th>
 <th>Update</th>
 
-
-
-
-
 </tr>
 
 
@@ -25,8 +18,26 @@
 
 
 
-
 <?php
+
+
+
+
+session_start();
+
+
+if($_SESSION['alpha']==1){
+
+
+
+
+
+
+
+
+
+
+
 
 
 $servername = "localhost";
@@ -72,11 +83,17 @@ if  (mysqli_num_rows($result) >0) {
 
 }
 
+}
 
+
+
+//enter code
 
 
 
 ?>
+
+
 </table>
 <br>
 <br>
@@ -85,3 +102,15 @@ if  (mysqli_num_rows($result) >0) {
 
 
 </form>
+
+
+
+
+<br>
+<br>
+<form action = "logout.php">
+<input type="submit" value="logout" </input>
+
+
+</form>
+

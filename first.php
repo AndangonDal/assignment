@@ -40,6 +40,17 @@ phone Number
 <?php
 
 
+
+session_start();
+
+
+if($_SESSION['alpha']==1){
+
+
+
+
+
+
 if(isset($_POST['submit'])) {
 	$name=0;	$lname=0;	$email=0;	$phone=0;
 
@@ -154,4 +165,17 @@ else{
 }
 
 }
+}
+else{
+
+	header('location:login.php');
+}
 ?>
+
+<br>
+<br>
+<form action = "logout1.php">
+<input type="submit" value="logout" </input>
+
+
+</form>
